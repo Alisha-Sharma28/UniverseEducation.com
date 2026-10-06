@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://universeeducation.com/sitemap.xml

@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our Impact | UniVerse Education</title>
+  <meta name="description" content="See every computer lab UniVerse Education has installed in rural schools across India and Nepal, where your money goes, and what each gift funds.">
+  <link rel="canonical" href="https://universeeducation.com/impact.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="UniVerse Education">
+  <meta property="og:title" content="Our Impact | UniVerse Education">
+  <meta property="og:description" content="Computer labs with wifi, installed in rural schools across India and Nepal. See where they are and where your money goes.">
+  <meta property="og:url" content="https://universeeducation.com/impact.html">
+  <meta property="og:image" content="https://universeeducation.com/images/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#1b2063">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="impact">
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Our impact</span>
+        <h1>Labs that are online and teaching</h1>
+        <p class="lead">Since we started in Vizirpur, Uttar Pradesh, we've donated over forty desktops and laptops, complete with wifi routers, to schools and learning centers across India and Nepal. Here's where they are.</p>
+      </div>
+    </section>
+
+    <!-- MAP -->
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="map-wrap reveal">
+          <div id="lab-map" role="region" aria-label="Map of UniVerse Education lab locations in South Asia"></div>
+          <div class="map-legend">
+            <span><i class="legend-dot done"></i>Lab installed</span>
+            <span><i class="legend-dot soon"></i>Coming soon</span>
+            <span class="small" id="map-soon"></span>
+          </div>
+        </div>
+        <p class="small mt-1">Pins are approximate. Edit locations in <code>js/config.js</code>.</p>
+      </div>
+    </section>
+
+    <!-- LAB CARDS -->
+    <section class="section section-white">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Lab by lab</span>
+          <h2>Every lab has a story</h2>
+        </div>
+        <div class="grid grid-3">
+
+          <article class="card card-media lab-card reveal">
+            <div class="photo" data-img="images/lab-vizirpur.jpg" role="img" aria-label="Students at the all-girls school in Vizirpur using their new desktop computers">
+              <span class="photo-label">Photo: Vizirpur lab<code>images/lab-vizirpur.jpg</code></span>
+            </div>
+            <div class="card-body">
+              <span class="tag">Our first lab</span>
+              <h3><span class="tbd">[School name]</span>, all-girls school</h3>
+              <ul class="lab-facts">
+                <li><span>Location</span><strong>Vizirpur, Uttar Pradesh, India</strong></li>
+                <li><span>Installed</span><strong class="tbd">[Month Year]</strong></li>
+                <li><span>Computers</span><strong>12 desktops</strong></li>
+                <li><span>Students</span><strong class="tbd">[#]</strong></li>
+              </ul>
+              <p>Where our mission began. For many students, this was their first hands-on time with Google Docs, Google Slides, Chrome, and Excel, the tools they'll be expected to know in college and at work.</p>
+              <blockquote>“<span class="tbd">[Quote from a student or teacher]</span>”</blockquote>
+            </div>
+          </article>
+
+          <article class="card card-media lab-card reveal">
+            <div class="photo" data-img="images/lab-kathmandu.jpg" role="img" aria-label="Children at Koseli Foundation in Kathmandu learning on donated laptops">
+              <span class="photo-label">Photo: Koseli Foundation<code>images/lab-kathmandu.jpg</code></span>
+            </div>
+            <div class="card-body">
+              <span class="tag">Nepal</span>
+              <h3>Koseli Foundation</h3>
+              <ul class="lab-facts">
+                <li><span>Location</span><strong>Kathmandu, Nepal</strong></li>
+                <li><span>Installed</span><strong class="tbd">[Month Year]</strong></li>
+                <li><span>Computers</span><strong>15 laptops</strong></li>
+                <li><span>Students</span><strong class="tbd">[#]</strong></li>
+              </ul>
+              <p>Koseli works with children from Kathmandu's underserved communities. After the laptops were up and running, our team spent about two weeks on site with the teachers, showing how to bring in learning platforms like Khan Academy.</p>
+              <blockquote>“<span class="tbd">[Quote from a Koseli teacher]</span>”</blockquote>
+            </div>
+          </article>
+
+          <article class="card card-media lab-card reveal">
+            <div class="photo" data-img="images/lab-pune.jpg" role="img" aria-label="Students at BVJSS in Pune in their refreshed computer lab">
+              <span class="photo-label">Photo: BVJSS lab, Pune<code>images/lab-pune.jpg</code></span>
+            </div>
+            <div class="card-body">
+              <span class="tag">AI curriculum</span>
+              <h3>BVJSS</h3>
+              <ul class="lab-facts">
+                <li><span>Location</span><strong>Pune, Maharashtra, India</strong></li>
+                <li><span>Installed</span><strong class="tbd">[Month Year]</strong></li>
+                <li><span>Computers</span><strong class="tbd">[#]</strong></li>
+                <li><span>Students</span><strong class="tbd">[#]</strong></li>
+              </ul>
+              <p>A registered nonprofit providing lodging and K–12 education for orphaned children and children with special needs. We refreshed their computer lab and helped integrate a new curriculum on AI fundamentals.</p>
+              <blockquote>“<span class="tbd">[Quote from BVJSS staff or a student]</span>”</blockquote>
+            </div>
+          </article>
+
+          <article class="card card-media lab-card reveal">
+            <div class="photo" data-img="images/lab-gujarat.jpg" role="img" aria-label="Students in the UniVerse computer lab in Gujarat">
+              <span class="photo-label">Photo: Gujarat lab<code>images/lab-gujarat.jpg</code></span>
+            </div>
+            <div class="card-body">
+              <span class="tag">India</span>
+              <h3 class="tbd">[School name]</h3>
+              <ul class="lab-facts">
+                <li><span>Location</span><strong><span class="tbd">[Village]</span>, Gujarat, India</strong></li>
+                <li><span>Installed</span><strong class="tbd">[Month Year]</strong></li>
+                <li><span>Computers</span><strong class="tbd">[#]</strong></li>
+                <li><span>Students</span><strong class="tbd">[#]</strong></li>
+              </ul>
+              <p class="tbd">[One or two sentences about this school and how students are using the lab.]</p>
+              <blockquote>“<span class="tbd">[Quote]</span>”</blockquote>
+            </div>
+          </article>
+
+          <article class="card card-media lab-card reveal">
+            <div class="photo" data-img="images/lab-rajasthan.jpg" role="img" aria-label="Students in the UniVerse computer lab in Rajasthan">
+              <span class="photo-label">Photo: Rajasthan lab<code>images/lab-rajasthan.jpg</code></span>
+            </div>
+            <div class="card-body">
+              <span class="tag">India</span>
+              <h3 class="tbd">[School name]</h3>
+              <ul class="lab-facts">
+                <li><span>Location</span><strong><span class="tbd">[Village]</span>, Rajasthan, India</strong></li>
+                <li><span>Installed</span><strong class="tbd">[Month Year]</strong></li>
+                <li><span>Computers</span><strong class="tbd">[#]</strong></li>
+                <li><span>Students</span><strong class="tbd">[#]</strong></li>
+              </ul>
+              <p class="tbd">[One or two sentences about this school and how students are using the lab.]</p>
+              <blockquote>“<span class="tbd">[Quote]</span>”</blockquote>
+            </div>
+          </article>
+
+          <article class="card card-media lab-card reveal">
+            <div class="photo" data-img="images/lab-coming-soon.jpg" role="img" aria-label="A classroom preparing for its new computer lab">
+              <span class="photo-label">Photo: next lab site<code>images/lab-coming-soon.jpg</code></span>
+            </div>
+            <div class="card-body">
+              <span class="tag tag-soon">Coming soon · 2 labs underway</span>
+              <h3>The next two labs</h3>
+              <p>Two more labs are in progress at <span class="tbd">[locations]</span>. We'll share photos and stories here as soon as students are online.</p>
+              <a class="btn btn-accent btn-sm" href="donate.html">Help fund them</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- WHERE YOUR MONEY GOES -->
+    <section class="section">
+      <div class="container narrow">
+        <div class="section-head reveal">
+          <span class="eyebrow">Transparency</span>
+          <h2>Where your money goes</h2>
+          <p class="lead">Every dollar donated goes toward labs. <span class="tbd">[Confirm, and explain how admin costs are covered, e.g. "Our team are unpaid student volunteers, and the few operating costs we have (like website hosting) are covered by founders and family."]</span></p>
+        </div>
+        <div class="reveal">
+          <!-- Set each segment's width to its real percentage, and replace the [__%] labels. -->
+          <div class="breakdown-bar" role="img" aria-label="Breakdown of spending: computers, wifi and networking, shipping and installation, and support. Percentages to be confirmed.">
+            <span class="bk-1" style="width:25%">[__%]</span>
+            <span class="bk-2" style="width:25%">[__%]</span>
+            <span class="bk-3" style="width:25%">[__%]</span>
+            <span class="bk-4" style="width:25%">[__%]</span>
+          </div>
+          <ul class="breakdown-legend">
+            <li><i class="bk-1"></i><div><b>Computers</b> <span class="tbd">[__%]</span><br><span class="small">Fully functional desktops and laptops.</span></div></li>
+            <li><i class="bk-2"></i><div><b>Wifi &amp; networking</b> <span class="tbd">[__%]</span><br><span class="small">Routers, cabling, and connectivity setup.</span></div></li>
+            <li><i class="bk-3"></i><div><b>Shipping &amp; installation</b> <span class="tbd">[__%]</span><br><span class="small">Getting equipment to the school and setting it up.</span></div></li>
+            <li><i class="bk-4"></i><div><b>Training &amp; support</b> <span class="tbd">[__%]</span><br><span class="small">Teacher onboarding, software, and repairs.</span></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- GIVING LEVELS -->
+    <section class="section section-white">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">What your gift does</span>
+          <h2>Concrete gifts, concrete outcomes</h2>
+        </div>
+        <div class="grid grid-3">
+          <article class="card giving-level reveal">
+            <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div>
+            <p class="amount"><span class="tbd">$[X]</span></p>
+            <p>funds <b>one computer</b> for a student lab.</p>
+          </article>
+          <article class="card giving-level reveal">
+            <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8.5a15 15 0 0 1 20 0M5 12a10 10 0 0 1 14 0M8.5 15.5a5 5 0 0 1 7 0"/><circle cx="12" cy="19" r="1.2" fill="currentColor"/></svg></div>
+            <p class="amount"><span class="tbd">$[X]</span></p>
+            <p>funds <b>wifi for a whole school</b>.</p>
+          </article>
+          <article class="card giving-level reveal">
+            <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg></div>
+            <p class="amount"><span class="tbd">$[X]</span></p>
+            <p>funds <b>a complete computer lab</b>.</p>
+          </article>
+        </div>
+        <p class="center mt-2"><a class="btn btn-accent" href="donate.html">Give today</a></p>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="js/config.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
