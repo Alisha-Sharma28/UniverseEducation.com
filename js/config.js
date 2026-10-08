@@ -9,13 +9,10 @@ window.SITE = {
 
   /* ---- Impact numbers (home page counter strip) — VERIFY EVERY NUMBER ---- */
   stats: {
-    raised: 16000,        // USD raised grassroots. Note: your notes also say "over $10K" — confirm which is current.
-    labsInstalled: 4,     // Note: your notes mention five locations — confirm.
-    labsUnderway: 2,
-    computers: 40,        // "over forty" desktops and laptops
-    students: null        // e.g. 600 — fill in once verified
+    raised: 10000,        // USD raised so far
+    computers: 40,        // desktops and laptops donated
+    students: 550         // students reached
   },
-  locationsLine: "Uttar Pradesh · Maharashtra · Gujarat · Rajasthan · Kathmandu", // confirm
 
   /* ---- Legal / trust ---- */
   legalStatus: "",        // e.g. "a registered 501(c)(3) nonprofit" — confirm before publishing

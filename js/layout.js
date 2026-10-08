@@ -44,10 +44,12 @@
   }
   window.socialList = socialList;
 
-  var brand =
-    '<a class="brand" href="index.html" aria-label="UniVerse Education home">' +
-    '<img src="images/logo.svg" alt="" width="38" height="38">' +
-    '<span class="brand-name">Uni<span>V</span>erse Education</span></a>';
+  function brandMark(logo) {
+    return '<a class="brand" href="index.html" aria-label="UniVerse Education home">' +
+      '<img src="images/' + logo + '" alt="" width="40" height="40">' +
+      '<span class="brand-name">Uni<span>Verse</span> Education</span></a>';
+  }
+  var brand = brandMark("logo.svg");
 
   var navItems = NAV.map(function (n) {
     return '<li><a href="' + n.href + '"' + (n.id === current ? ' aria-current="page"' : "") + ">" + n.label + "</a></li>";
@@ -68,7 +70,7 @@
   var footer =
     '<footer class="site-footer"><div class="container">' +
     '<div class="footer-grid">' +
-      "<div>" + brand + "<p>" + (S.mission || "") + "</p>" + socialList() + "</div>" +
+      "<div>" + brandMark("logo-light.svg") + "<p>" + (S.mission || "") + "</p>" + socialList() + "</div>" +
       '<div><h2>Quick links</h2><ul class="footer-links">' +
         NAV.map(function (n) { return '<li><a href="' + n.href + '">' + n.label + "</a></li>"; }).join("") +
         '<li><a href="donate.html">Donate</a></li>' +

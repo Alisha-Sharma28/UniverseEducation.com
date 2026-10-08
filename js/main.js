@@ -48,7 +48,6 @@
     var img = new Image();
     img.onload = function () {
       img.alt = alt;
-      img.loading = "lazy";
       img.decoding = "async";
       slot.insertBefore(img, slot.firstChild);
       slot.classList.add("has-img");

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="UniVerse Education logo">
-<!-- A star held inside the U (each student), sending a signal out to a star beyond it (the wider world). -->
-<path d="M11 19v14a21 21 0 0 0 42 0V19" fill="none" stroke="#1b2063" stroke-width="7" stroke-linecap="round"/>
+<!-- Light version for dark backgrounds -->
+<path d="M11 19v14a21 21 0 0 0 42 0V19" fill="none" stroke="#fbf8f3" stroke-width="7" stroke-linecap="round"/>
 <path d="M31 32 Q37 17 47.5 11" fill="none" stroke="#f2a71b" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="3.2 3"/>
 <path d="M29.00,23.50 Q31.07,32.93 40.50,35.00 Q31.07,37.07 29.00,46.50 Q26.93,37.07 17.50,35.00 Q26.93,32.93 29.00,23.50Z" fill="#f2a71b"/>
 <path d="M50.00,3.50 Q50.99,8.01 55.50,9.00 Q50.99,9.99 50.00,14.50 Q49.01,9.99 44.50,9.00 Q49.01,8.01 50.00,3.50Z" fill="#f2a71b"/>

@@ -15,9 +15,9 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#1b2063">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=gambarino@400&amp;f[]=clash-display@400,500,600,700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body data-page="home">
@@ -31,28 +31,35 @@
       </div>
       <div class="container">
         <div class="hero-content">
-          <span class="eyebrow" style="color:var(--marigold-400)">Student-led · Grassroots-funded</span>
           <h1>Every student deserves a connection to the world.</h1>
-          <p>UniVerse Education builds computer labs with internet access in rural South Asian village schools.</p>
+          <p>We bring computers to rural village schools across South Asia, opening the door to digital learning for students.</p>
           <div class="btn-row">
+            <a class="btn btn-accent" href="get-involved.html">Join our mission</a>
+            <a class="btn btn-ghost-light" href="impact.html">See our impact</a>
             <a class="btn btn-accent" href="donate.html">Donate</a>
-            <a class="btn btn-ghost-light" href="impact.html">See Our Impact</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 2. IMPACT COUNTERS (numbers live in js/config.js) -->
+    <!-- 2. IMPACT NUMBERS (edit the numbers in js/config.js) -->
     <section class="stats" aria-label="Our impact so far">
       <div class="container">
         <div class="stats-grid">
-          <div class="stat"><span class="stat-num" data-stat="raised" data-prefix="$" data-suffix="+">$16,000+</span><span class="stat-label">raised grassroots</span></div>
-          <div class="stat"><span class="stat-num" data-stat="labsInstalled">4</span><span class="stat-label">computer labs installed</span></div>
-          <div class="stat"><span class="stat-num" data-stat="labsUnderway">2</span><span class="stat-label">more labs underway</span></div>
+          <div class="stat"><span class="stat-num" data-stat="raised" data-prefix="$" data-suffix="+">$10,000+</span><span class="stat-label">raised so far</span></div>
           <div class="stat"><span class="stat-num" data-stat="computers" data-suffix="+">40+</span><span class="stat-label">computers donated</span></div>
-          <div class="stat"><span class="stat-num" data-stat="students" data-suffix="+">[#]</span><span class="stat-label">students reached</span></div>
+          <div class="stat"><span class="stat-num" data-stat="students" data-suffix="+">550+</span><span class="stat-label">students reached</span></div>
         </div>
-        <p class="stats-note"><span class="pin">●</span> <span data-config="locationsLine">Uttar Pradesh · Maharashtra · Gujarat · Rajasthan · Kathmandu</span></p>
+        <div class="locations">
+          <h2 class="locations-title">Where we've donated</h2>
+          <ul class="locations-list">
+            <li><strong>Vizirpur</strong><span>Uttar Pradesh, India</span></li>
+            <li><strong>Maharashtra</strong><span>India</span></li>
+            <li><strong>Gujarat</strong><span>India</span></li>
+            <li><strong>Rajasthan</strong><span>India</span></li>
+            <li><strong>Kathmandu</strong><span>Nepal</span></li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -62,13 +69,13 @@
         <div class="grid grid-2">
           <div class="panel panel-light reveal">
             <span class="eyebrow">The problem</span>
-            <h2>Talent is everywhere. Access isn't.</h2>
-            <p>Many rural schools in South Asia have no computers and no internet. That gap limits access to modern education, digital literacy, and the opportunities that come with them, from higher education to the jobs where tools like Google Docs and spreadsheets are simply expected.</p>
+            <h2>Intelligence is everywhere, yet equal access to technology isn't.</h2>
+            <p>Thousands of K–12 schools across rural South Asia still operate offline, without access to any computers or online-learning tools. As the world shifts online, this gap limits students' access to modern education, digital literacy, and equal opportunities to pursue tech-focused careers in the future.</p>
           </div>
           <div class="panel panel-navy reveal">
-            <span class="eyebrow" style="color:var(--marigold-400)">Our solution</span>
-            <h2>Complete, working labs, not just hardware.</h2>
-            <p>We fundraise, purchase fully functional desktop computers and wifi routers, and install complete labs in partnership with trusted on-the-ground organizations. Then we stay involved so the lab keeps teaching.</p>
+            <span class="eyebrow">Our solution</span>
+            <h2>We build computer labs where there are none.</h2>
+            <p>We raise the funds, buy the computers and Wi-Fi routers, and work internationally with trusted partners to build fully equipped computer labs at each school. After installation, we conduct monthly surveys to ensure our computers remain in good condition and in active use.</p>
           </div>
         </div>
       </div>
@@ -78,76 +85,78 @@
     <section class="section section-white">
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow">How it works</span>
-          <h2>Four steps from a fundraiser to a working lab</h2>
+          <span class="eyebrow eyebrow-lg">How it works</span>
+          <h2>The four-step procedure to bringing a classroom online</h2>
         </div>
-        <div class="grid grid-4">
+        <div class="grid steps-grid">
           <article class="card reveal">
             <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.4-9.3-9A5.3 5.3 0 0 1 12 6.3 5.3 5.3 0 0 1 21.3 12C19 16.6 12 21 12 21z"/></svg></div>
             <p class="step-num">Step 1</p>
             <h3>Fundraise</h3>
-            <p>Bake sales, dance events, dinners, and school drives. Every dollar is raised grassroots by students and families.</p>
+            <p>Grants, charity auctions, bake sales, and temple partnerships. Each dollar is raised through the support of our community and partners.</p>
           </article>
           <article class="card reveal">
             <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div>
             <p class="step-num">Step 2</p>
-            <h3>Purchase &amp; Install</h3>
-            <p>We buy fully functional computers and wifi routers and set up a complete, connected lab with our partners.</p>
+            <h3>Research, Purchase, and Install</h3>
+            <p>Through careful research into surrounding communities with limited technology access, we select the schools and educational foundations that we believe will benefit most from a computer lab. Then, we work to find local vendors that offer reliable, fully functional equipment at fair prices. Finally, we work with our chosen vendors to plan the logistics of purchasing, delivery, and installation at each site.</p>
           </article>
           <article class="card reveal">
             <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18.5 20a6.5 6.5 0 0 0-2.5-5.1"/></svg></div>
             <p class="step-num">Step 3</p>
-            <h3>Train &amp; Support</h3>
-            <p>We work alongside teachers to introduce tools like Google Docs, Slides, Khan Academy, and even AI fundamentals.</p>
+            <h3>Training and Support</h3>
+            <p>After installation, UniVerse Education works alongside teachers at each site, training them on the tools their students need, from Google Docs to Zoom to Khan Academy.</p>
           </article>
           <article class="card reveal">
             <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21v-9M12 12C12 7 8 4 3 4c0 5 4 8 9 8zM12 14c0-4 3-6.5 8-6.5 0 4-3 6.5-8 6.5z"/></svg></div>
             <p class="step-num">Step 4</p>
             <h3>Sustain</h3>
-            <p>We check in with partner schools, follow up on how the lab is used, and keep teaching remotely when we can.</p>
+            <p>We periodically check in with schools, track how the lab is being used, and collect student survey data to ensure students are growing their confidence and competence.</p>
           </article>
         </div>
         <p class="center mt-2"><a class="btn btn-outline" href="how-it-works.html">See our full process</a></p>
       </div>
     </section>
 
-    <!-- 6. FEATURED STORY -->
+    <!-- 6. PHOTO GALLERY — add photos to /images as gallery-2.jpg … gallery-5.jpg -->
     <section class="section">
       <div class="container">
-        <article class="feature-story reveal">
-          <div class="photo" data-img="images/story-zoom-teaching.jpg" role="img" aria-label="Students in Nepal joining a remote math lesson on a donated computer">
-            <span class="photo-label">Photo: remote Zoom math class in Nepal<code>images/story-zoom-teaching.jpg</code></span>
-          </div>
-          <div class="story-body">
-            <span class="eyebrow">Featured story</span>
-            <h2>Technology That Keeps Teaching</h2>
-            <!-- CONFIRM: the brief says "an orphanage in Nepal"; your notes describe Koseli Foundation (Kathmandu) as working with children from urban slum communities. Make sure this wording matches the partner. -->
-            <p>After we donated computers to <span class="tbd">[an orphanage in Nepal — confirm partner name]</span>, our founder didn't stop at delivery. Back home, they kept teaching math to the kids remotely over Zoom, using the curriculum installed on the very computers we'd donated.</p>
-            <p>There was a language barrier, so a volunteer from the village community joined as a live translator, and the lessons shifted toward a more visual style: diagrams, worked examples on screen, and lots of patience on both sides.</p>
-            <blockquote>“<span class="tbd">[Add a short quote from the founder, a teacher, or a student]</span>”<cite><span class="tbd">[Name, role]</span></cite></blockquote>
-            <a class="btn btn-primary" href="story.html">Read our story</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- 7. UPCOMING EVENT -->
-    <section class="section pt-0" style="padding-top:0">
-      <div class="container">
-        <div class="event-banner reveal">
-          <div>
-            <span class="eyebrow">Upcoming event</span>
-            <h2>Dinner Night for Education and Hygiene</h2>
-            <p class="mb-0">A family dinner with home-cooked dishes from around the world, performances, music, and games, co-hosted with our friends at Owed Soap.</p>
-            <ul class="event-meta">
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span class="tbd" data-config="event.dateLabel">[Date TBA]</span></li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span class="tbd" data-config="event.venue">[Venue TBA]</span></li>
-              <li>$28 adults · $16 kids</li>
-            </ul>
-          </div>
-          <div class="btn-row">
-            <a class="btn btn-accent" href="events.html">Event details</a>
-          </div>
+        <div class="section-head reveal">
+          <span class="eyebrow">Gallery</span>
+          <h2>Our documented journey</h2>
+          <p class="lead">We have brought our camera along with us the whole way. Here is how our mission is going so far.</p>
+        </div>
+        <div class="journey">
+          <figure class="journey-item journey-feature reveal">
+            <div class="photo" data-img="images/gallery-1.jpg" role="img" aria-label="A UniVerse Education volunteer crouching with five smiling boys in front of their new desktop computers at the Koseli Foundation in Kathmandu, Nepal">
+              <span class="photo-label"><code>images/gallery-1.jpg</code></span>
+            </div>
+            <figcaption>The first full day of computer usage at the Koseli Foundation in rural Kathmandu, Nepal.</figcaption>
+          </figure>
+          <figure class="journey-item reveal">
+            <div class="photo" data-img="images/gallery-2.jpg" role="img" aria-label="Photo from a UniVerse Education computer lab">
+              <span class="photo-label">Photo 2 coming soon<code>images/gallery-2.jpg</code></span>
+            </div>
+            <figcaption class="tbd">[Caption for photo 2]</figcaption>
+          </figure>
+          <figure class="journey-item reveal">
+            <div class="photo" data-img="images/gallery-3.jpg" role="img" aria-label="Photo from a UniVerse Education computer lab">
+              <span class="photo-label">Photo 3 coming soon<code>images/gallery-3.jpg</code></span>
+            </div>
+            <figcaption class="tbd">[Caption for photo 3]</figcaption>
+          </figure>
+          <figure class="journey-item reveal">
+            <div class="photo" data-img="images/gallery-4.jpg" role="img" aria-label="Photo from a UniVerse Education computer lab">
+              <span class="photo-label">Photo 4 coming soon<code>images/gallery-4.jpg</code></span>
+            </div>
+            <figcaption class="tbd">[Caption for photo 4]</figcaption>
+          </figure>
+          <figure class="journey-item reveal">
+            <div class="photo" data-img="images/gallery-5.jpg" role="img" aria-label="Photo from a UniVerse Education computer lab">
+              <span class="photo-label">Photo 5 coming soon<code>images/gallery-5.jpg</code></span>
+            </div>
+            <figcaption class="tbd">[Caption for photo 5]</figcaption>
+          </figure>
         </div>
       </div>
     </section>
