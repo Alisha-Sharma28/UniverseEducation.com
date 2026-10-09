@@ -10,10 +10,10 @@ Only use photos you have permission to share, especially of minors.
 
 | File | Where it appears |
 |---|---|
-| `logo.svg` | Header, footer, favicon (placeholder mark — replace with your logo, also copy to `/favicon.svg`) |
+| `logo.svg`, `logo-light.svg` | Logo (header) and light version (footer); `/favicon.svg` is the browser-tab icon |
 | `og-image.jpg` | Link preview image on social media/texts (1200×630) |
 | `home-hero.jpg` | Home page hero (students in a lab) |
-| `story-zoom-teaching.jpg` | Home "Technology That Keeps Teaching" story |
+| `gallery-1.jpg` … `gallery-4.jpg` | Home "Our documented journey" gallery |
 | `lab-vizirpur.jpg` | Impact page — Vizirpur lab |
 | `lab-kathmandu.jpg` | Impact page — Koseli Foundation |
 | `lab-pune.jpg` | Impact page — BVJSS |
@@ -22,9 +22,10 @@ Only use photos you have permission to share, especially of minors.
 | `lab-coming-soon.jpg` | Impact page — labs underway |
 | `founder.jpg` | Our Story — founder photo |
 | `team-founder.jpg`, `team-2.jpg`, `team-3.jpg`, `team-4.jpg` | Our Story — team (square crops) |
-| `logo-asha.png` | Partners strip + Our Story |
-| `logo-owed-soap.png` | Partners strip + Events |
-| `press-1.png`, `press-2.png` | "As featured in" logos |
+| `partner-owed-soap.png`, `partner-koseli.png` | Home partners (added) |
+| `partner-bvjss.png`, `partner-asha.png` | Home partners (add these) |
+| `logo-asha.png` | Our Story partnership section |
+| `logo-owed-soap.png` | Events page |
 | `fundraiser.jpg` | Get Involved — starter kit |
 | `event-dinner.jpg` | Events — Dinner Night |
 | `past-event-1-a.jpg` … `past-event-2-d.jpg` | Events — past event galleries |

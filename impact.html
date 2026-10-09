@@ -18,7 +18,6 @@
   <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
   <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
   <link href="https://api.fontshare.com/v2/css?f[]=gambarino@400&amp;f[]=clash-display@400,500,600,700&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body data-page="impact">
@@ -28,23 +27,24 @@
     <section class="page-hero">
       <div class="container">
         <span class="eyebrow">Our impact</span>
-        <h1>Labs that are online and teaching</h1>
-        <p class="lead">Since we started in Vizirpur, Uttar Pradesh, we've donated over forty desktops and laptops, complete with wifi routers, to schools and learning centers across India and Nepal. Here's where they are.</p>
+        <h1>Computer labs that are online and teaching</h1>
+        <p class="lead">Since we first began in Vizirpur, we've expanded to reach several learning centers across India and Nepal. Here's where they are.</p>
       </div>
     </section>
 
-    <!-- MAP -->
+    <!-- MAP (Google My Maps — edit pins at google.com/mymaps and they update here automatically) -->
     <section class="section" style="padding-top:0">
       <div class="container">
         <div class="map-wrap reveal">
-          <div id="lab-map" role="region" aria-label="Map of UniVerse Education lab locations in South Asia"></div>
+          <div class="map-frame">
+            <iframe src="https://www.google.com/maps/d/embed?mid=1CuSkxX68NIYbDa8TaMCeQc3CzmvkTHs&amp;ehbc=2E312F" title="Map of UniVerse Education computer lab locations in India and Nepal" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          </div>
           <div class="map-legend">
-            <span><i class="legend-dot done"></i>Lab installed</span>
-            <span><i class="legend-dot soon"></i>Coming soon</span>
-            <span class="small" id="map-soon"></span>
+            <span class="legend-item"><svg class="legend-pin" viewBox="0 0 24 32" aria-hidden="true"><path d="M12 1C6 1 1.5 5.6 1.5 11.4 1.5 19.3 12 31 12 31s10.5-11.7 10.5-19.6C22.5 5.6 18 1 12 1z" fill="#8e44ad"/><circle cx="12" cy="11.5" r="4" fill="#fff"/></svg>Computer lab donated</span>
+            <span class="legend-item"><svg class="legend-circle" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="#fff" stroke="#d93025" stroke-width="5"/></svg>Coming soon</span>
+            <a class="legend-link" href="https://www.google.com/maps/d/viewer?mid=1CuSkxX68NIYbDa8TaMCeQc3CzmvkTHs" target="_blank" rel="noopener">Open full map ↗</a>
           </div>
         </div>
-        <p class="small mt-1">Pins are approximate. Edit locations in <code>js/config.js</code>.</p>
       </div>
     </section>
 
@@ -219,7 +219,6 @@
   </main>
 
   <div id="site-footer"></div>
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script src="js/config.js"></script>
   <script src="js/layout.js"></script>
   <script src="js/main.js"></script>

@@ -273,33 +273,6 @@
     render();
   }
 
-  /* ---------- Impact map (Leaflet + OpenStreetMap, no API key) ---------- */
-  var mapEl = $("#lab-map");
-  if (mapEl) {
-    if (!window.L) {
-      mapEl.innerHTML = '<p class="map-fallback">The interactive map couldn\'t load. See every lab location in the cards below.</p>';
-    } else {
-      var map = L.map(mapEl, { scrollWheelZoom: false, attributionControl: true }).setView([23.5, 80], 4);
-      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        maxZoom: 12,
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-      }).addTo(map);
-      var soonList = [];
-      (S.labs || []).forEach(function (lab) {
-        var soon = lab.status === "soon";
-        if (lab.lat == null) { soonList.push(lab); return; }
-        var icon = L.divIcon({ className: "", html: '<div class="map-pin' + (soon ? " soon" : "") + '"></div>', iconSize: [26, 26], iconAnchor: [13, 13] });
-        L.marker([lab.lat, lab.lng], { icon: icon, title: lab.name, alt: lab.name + ", " + lab.place })
-          .addTo(map)
-          .bindPopup("<strong>" + lab.name + "</strong><br>" + lab.place + "<br><em>" + (soon ? "Coming soon" : "Lab installed") + "</em>");
-      });
-      var soonEl = $("#map-soon");
-      if (soonEl && soonList.length) {
-        soonEl.textContent = "Not yet pinned: " + soonList.map(function (l) { return l.name + " (" + l.place + ")"; }).join(", ");
-      }
-    }
-  }
-
   /* ---------- Google Analytics (only if configured) + cookie banner ---------- */
   function loadGA() {
     if (!S.gaId || window.gtag) return;

@@ -90,9 +90,11 @@ Buy a domain (for example from Namecheap, Cloudflare or Google), then follow you
 | `gaId` | Google Analytics → **Admin → Data streams** → your **Measurement ID** (`G-…`). Once this is set, a cookie consent banner appears automatically and analytics load only after the visitor accepts. |
 | `event.*` | Event date (ISO format), a friendly date label, the venue, and the ticket link. This turns on the **Add to calendar** and **Google Calendar** buttons. |
 | `stats.*` | The animated numbers on the home page. |
-| `labs` | Map pins on the Impact page. Replace the approximate coordinates with each school's real location (right-click a spot in Google Maps to copy its coordinates). |
 
 ## Editing tips
+
+- **Impact map:** it's your Google My Map. Edit pins at https://www.google.com/mymaps and the website updates automatically.
+- **Partner logos:** drop `partner-bvjss.png` or `partner-asha.png` into `/images` and they replace the name tiles on the home page.
 
 - **Colors and fonts:** change the variables at the top of `css/styles.css`.
 - **Menu or footer:** edit `js/layout.js` once and every page updates.

@@ -49,18 +49,5 @@ window.SITE = {
     dateLabel: "",        // e.g. "Saturday, November 14, 2026 · 6–9 PM"
     venue: "",            // e.g. "Community Center, 123 Main St, San Jose, CA"
     ticketUrl: ""         // Eventbrite / Givebutter ticket link
-  },
-
-  /* ---- Map pins (Our Impact page) ----
-     status: "installed" or "soon". Coordinates marked approx should be replaced
-     with the school's real location. Pins with lat: null are listed but not drawn. */
-  labs: [
-    { name: "All-girls school, Vizirpur", place: "Vizirpur, Uttar Pradesh, India", lat: 26.85, lng: 80.95, status: "installed", approx: true },
-    { name: "Koseli Foundation", place: "Kathmandu, Nepal", lat: 27.7172, lng: 85.324, status: "installed", approx: true },
-    { name: "BVJSS", place: "Pune, Maharashtra, India", lat: 18.5204, lng: 73.8567, status: "installed", approx: true },
-    { name: "[School name]", place: "Gujarat, India", lat: 22.6, lng: 71.6, status: "installed", approx: true },
-    { name: "[School name]", place: "Rajasthan, India", lat: 26.6, lng: 74.2, status: "installed", approx: true },
-    { name: "Lab underway #1", place: "[Location to be announced]", lat: null, lng: null, status: "soon" },
-    { name: "Lab underway #2", place: "[Location to be announced]", lat: null, lng: null, status: "soon" }
-  ]
+  }
 };
