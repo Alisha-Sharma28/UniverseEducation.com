@@ -37,7 +37,7 @@ Before you publish, double-check these against each other, because your notes an
 | Item | Notes say | Brief says |
 |---|---|---|
 | Amount raised | "over $10K" | "$16,000+" |
-| Locations | 5 (Vizirpur UP, Kathmandu, Pune, +2) | 4 labs: Gujarat, Rajasthan, Kathmandu |
+| Locations | 5 (Wazirpur UP, Kathmandu, Pune, +2) | 4 labs: Gujarat, Rajasthan, Kathmandu |
 | Nepal partner | Koseli Foundation (slum communities) | "an orphanage in Nepal" |
 
 Also confirm the tax-deductibility FAQ, the EIN, and the nonprofit status line. Only say donations are tax-deductible once IRS 501(c)(3) status (or a fiscal sponsor) is confirmed.
@@ -84,7 +84,6 @@ Buy a domain (for example from Namecheap, Cloudflare or Google), then follow you
 
 | Setting | How to get it |
 |---|---|
-| `donateUrl` | Create a free campaign on **Givebutter** (good for nonprofits), a **PayPal** donate link, or a **Stripe Payment Link**, and paste the URL. Add `monthlyDonateUrl` if your processor uses a separate link for recurring gifts. You can also paste your processor's embed code into the dashed box on `donate.html`. |
 | `mailchimpAction` | Mailchimp → **Audience → Signup forms → Embedded forms**. Copy the URL inside `action="..."`. |
 | `formEndpoint` | Only needed on GitHub Pages (see above). |
 | `gaId` | Google Analytics → **Admin → Data streams** → your **Measurement ID** (`G-…`). Once this is set, a cookie consent banner appears automatically and analytics load only after the visitor accepts. |
@@ -92,6 +91,8 @@ Buy a domain (for example from Namecheap, Cloudflare or Google), then follow you
 | `stats.*` | The animated numbers on the home page. |
 
 ## Editing tips
+
+- **Donation links:** the GoFundMe and PayPal buttons are near the top of `donate.html`. Search for `gofund.me` or `paypal.me` to change them.
 
 - **Impact map:** it's your Google My Map. Edit pins at https://www.google.com/mymaps and the website updates automatically.
 - **Partner logos:** drop `partner-bvjss.png` or `partner-asha.png` into `/images` and they replace the name tiles on the home page.

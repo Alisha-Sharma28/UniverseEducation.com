@@ -228,51 +228,6 @@
     a.target = "_blank"; a.rel = "noopener";
   });
 
-  /* ---------- Donate widget ---------- */
-  var donate = $("#donate-widget");
-  if (donate) {
-    var freq = "once", amount = 50;
-    var summary = $("#donate-summary"), custom = $("#custom-amount"), go = $("#donate-go"), dStatus = $("#donate-status");
-    function render() {
-      var label = freq === "monthly" ? "/month" : "";
-      summary.textContent = amount ? "You're giving $" + amount.toLocaleString() + label + ". Thank you!" : "Choose or enter an amount.";
-      go.textContent = amount ? "Donate $" + amount.toLocaleString() + label : "Donate";
-    }
-    $$(".toggle button", donate).forEach(function (b) {
-      b.addEventListener("click", function () {
-        freq = b.getAttribute("data-freq");
-        $$(".toggle button", donate).forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
-        render();
-      });
-    });
-    $$(".amount-opt", donate).forEach(function (b) {
-      b.addEventListener("click", function () {
-        amount = +b.getAttribute("data-amount");
-        custom.value = "";
-        $$(".amount-opt", donate).forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
-        render();
-      });
-    });
-    custom.addEventListener("input", function () {
-      var v = Math.max(0, Math.floor(+custom.value || 0));
-      amount = v;
-      $$(".amount-opt", donate).forEach(function (x) { x.setAttribute("aria-pressed", "false"); });
-      render();
-    });
-    go.addEventListener("click", function () {
-      if (!amount || amount < 1) { setStatus(dStatus, "Please choose an amount.", "warn"); return; }
-      var url = (freq === "monthly" && S.monthlyDonateUrl) ? S.monthlyDonateUrl : S.donateUrl;
-      if (!url) {
-        setStatus(dStatus, "Online giving isn't connected yet. Add your Givebutter, PayPal, or Stripe link in js/config.js.", "warn");
-        return;
-      }
-      // Pass the amount along where the processor supports it (Givebutter/PayPal accept ?amount=)
-      var sep = url.indexOf("?") > -1 ? "&" : "?";
-      window.open(url + sep + "amount=" + amount + (freq === "monthly" ? "&frequency=monthly" : ""), "_blank", "noopener");
-    });
-    render();
-  }
-
   /* ---------- Google Analytics (only if configured) + cookie banner ---------- */
   function loadGA() {
     if (!S.gaId || window.gtag) return;

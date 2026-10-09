@@ -33,9 +33,6 @@ window.SITE = {
   // Contact / volunteer forms. Leave "" if hosting on Netlify (Netlify Forms work automatically).
   // For GitHub Pages, create a free form at formspree.io and paste its endpoint, e.g. "https://formspree.io/f/abcdwxyz"
   formEndpoint: "",
-  // Payment processor links (Givebutter campaign, PayPal donate link, or Stripe Payment Link)
-  donateUrl: "",
-  monthlyDonateUrl: "",   // optional separate link for recurring gifts; falls back to donateUrl
   // Google Analytics 4 measurement ID, e.g. "G-XXXXXXXXXX". Cookie banner only appears when this is set.
   gaId: "",
   // Fundraiser starter kit (PDF in /images or a Google Drive link)

@@ -4,17 +4,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Donate | UniVerse Education</title>
-  <meta name="description" content="Donate to UniVerse Education to fund computers and wifi for rural South Asian village schools. Give once or monthly.">
+  <meta name="description" content="Donate to UniVerse Education through GoFundMe or PayPal to fund computers and Wi-Fi for rural South Asian village schools.">
   <link rel="canonical" href="https://universeeducation.com/donate.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="UniVerse Education">
   <meta property="og:title" content="Donate | Help us power the next lab">
-  <meta property="og:description" content="Your gift funds computers and wifi for rural schools in India and Nepal. Give once or monthly.">
+  <meta property="og:description" content="Your gift funds computers and Wi-Fi for rural schools in India and Nepal. Give through GoFundMe or PayPal.">
   <meta property="og:url" content="https://universeeducation.com/donate.html">
   <meta property="og:image" content="https://universeeducation.com/images/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#1b2063">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="images/favicon-180.png">
   <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
   <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
   <link href="https://api.fontshare.com/v2/css?f[]=gambarino@400&amp;f[]=clash-display@400,500,600,700&amp;display=swap" rel="stylesheet">
@@ -32,72 +33,53 @@
       </div>
     </section>
 
+    <!-- GIVE: two direct links -->
     <section class="section" style="padding-top:0">
       <div class="container">
-        <div class="donate-layout">
-
-          <!-- DONATION WIDGET -->
-          <div class="donate-box" id="donate-widget">
-            <h2 class="visually-hidden">Choose your gift</h2>
-            <div class="toggle" role="group" aria-label="Donation frequency">
-              <button type="button" data-freq="once" aria-pressed="true">One-time</button>
-              <button type="button" data-freq="monthly" aria-pressed="false">Monthly</button>
-            </div>
-
-            <!-- Outcomes: confirm each before publishing -->
-            <div class="amounts" role="group" aria-label="Donation amount">
-              <button type="button" class="amount-opt" data-amount="25" aria-pressed="false">
-                <span class="amt">$25</span><span class="outcome"><span class="tbd">[e.g. a keyboard and mouse set]</span></span>
-              </button>
-              <button type="button" class="amount-opt" data-amount="50" aria-pressed="true">
-                <span class="amt">$50</span><span class="outcome"><span class="tbd">[e.g. a month of internet for a school]</span></span>
-              </button>
-              <button type="button" class="amount-opt" data-amount="100" aria-pressed="false">
-                <span class="amt">$100</span><span class="outcome"><span class="tbd">[e.g. a wifi router for a lab]</span></span>
-              </button>
-              <button type="button" class="amount-opt" data-amount="250" aria-pressed="false">
-                <span class="amt">$250</span><span class="outcome"><span class="tbd">[e.g. one complete desktop computer]</span></span>
-              </button>
-            </div>
-            <div class="field custom-amount">
-              <label class="visually-hidden" for="custom-amount">Custom amount in US dollars</label>
-              <span aria-hidden="true">$</span>
-              <input id="custom-amount" type="number" min="1" step="1" inputmode="numeric" placeholder="Other amount">
-            </div>
-
-            <p class="donate-summary" id="donate-summary" aria-live="polite"></p>
-            <button type="button" class="btn btn-accent" id="donate-go">Donate</button>
-            <p class="form-status small mt-1" id="donate-status" role="status" aria-live="polite"></p>
-
-            <div class="processor-slot">
-              <strong>Payment processor placeholder.</strong> Paste your Givebutter, PayPal, or Stripe Payment Link into <code>donateUrl</code> in <code>js/config.js</code>. The button above will open it with the chosen amount. Or replace this box with your processor's embed code (e.g. a Givebutter widget).
-            </div>
+        <div class="give-box reveal">
+          <h2 class="give-title">Choose how you'd like to give</h2>
+          <div class="give-buttons">
+            <a class="give-btn give-gofundme" href="https://gofund.me/2707df1fc" target="_blank" rel="noopener">
+              <span class="give-name">GoFundMe</span>
+              <span class="give-sub">Give by card on our campaign page ↗</span>
+            </a>
+            <a class="give-btn give-paypal" href="https://paypal.me/UniVerseEducation" target="_blank" rel="noopener">
+              <span class="give-name">PayPal</span>
+              <span class="give-sub">Send directly to UniVerse Education ↗</span>
+            </a>
           </div>
+          <p class="small give-note">Both open in a new tab.</p>
+        </div>
+      </div>
+    </section>
 
-          <!-- TRUST & IMPACT -->
-          <aside>
-            <h2 class="h3" style="font-size:1.5rem">Where your gift goes</h2>
-            <p>Your donation funds fully functional computers, wifi routers, installation, and teacher support for rural schools in India and Nepal. <a href="impact.html">See our impact</a> and <a href="how-it-works.html">how we work</a>.</p>
-            <ul class="trust mt-1">
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
-                <div><b>Secure payment</b><span>Processed by <span class="tbd">[Givebutter / PayPal / Stripe]</span>. We never see or store your card details.</span></div>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg>
-                <div><b>Nonprofit status</b><span><span class="tbd">[Confirm: e.g. "UniVerse Education is a registered 501(c)(3) nonprofit."]</span> EIN: <span class="tbd" data-config="ein">[EIN]</span></span></div>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h6"/></svg>
-                <div><b>Tax receipts</b><span class="tbd">[Confirm: e.g. "You'll receive an email receipt for your records. Donations are tax-deductible to the extent allowed by law."]</span></div>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18.5 20a6.5 6.5 0 0 0-2.5-5.1"/></svg>
-                <div><b>Student-run, grassroots-funded</b><span>Every lab so far has been funded by our community.</span></div>
-              </li>
-            </ul>
-            <p class="small mt-1">Prefer to give by check, through your employer, or as a sponsor? <a href="contact.html">Contact us</a>.</p>
-          </aside>
+    <!-- WHAT YOUR GIFT DOES -->
+    <section class="section section-white">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>What your gift does</h2>
+        </div>
+        <div class="grid gifts">
+          <article class="card giving-level reveal">
+            <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="15" height="10" rx="2"/><path d="M5 10h1M8 10h1M11 10h1M14 10h0M5 13h1M8 13h4M15 13h0"/><rect x="18.5" y="9" width="3.5" height="6" rx="1.75"/></svg></div>
+            <p class="amount">$25</p>
+            <p>a keyboard and mouse set</p>
+          </article>
+          <article class="card giving-level reveal">
+            <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div>
+            <p class="amount">$50</p>
+            <p>a monitor for a lab computer</p>
+          </article>
+          <article class="card giving-level reveal">
+            <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8.5a15 15 0 0 1 20 0M5 12a10 10 0 0 1 14 0M8.5 15.5a5 5 0 0 1 7 0"/><circle cx="12" cy="19" r="1.2" fill="currentColor"/></svg></div>
+            <p class="amount">$150</p>
+            <p>a Wi-Fi router for a school</p>
+          </article>
+          <article class="card giving-level reveal">
+            <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="14" height="10" rx="1.5"/><path d="M6 18h6M9 14v4"/><rect x="18" y="4" width="4" height="15" rx="1"/><path d="M19.5 7h1"/></svg></div>
+            <p class="amount">$250</p>
+            <p>one complete desktop computer</p>
+          </article>
         </div>
       </div>
     </section>

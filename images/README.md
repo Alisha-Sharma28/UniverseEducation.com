@@ -10,11 +10,11 @@ Only use photos you have permission to share, especially of minors.
 
 | File | Where it appears |
 |---|---|
-| `logo.svg`, `logo-light.svg` | Logo (header) and light version (footer); `/favicon.svg` is the browser-tab icon |
+| `logo.png`, `logo-light.png` | Logo (header) and light version (footer). `/favicon.png` and `favicon-180.png` are the browser-tab and phone icons |
 | `og-image.jpg` | Link preview image on social media/texts (1200×630) |
 | `home-hero.jpg` | Home page hero (students in a lab) |
 | `gallery-1.jpg` … `gallery-4.jpg` | Home "Our documented journey" gallery |
-| `lab-vizirpur.jpg` | Impact page — Vizirpur lab |
+| `lab-wazirpur.jpg` | Impact page — Wazirpur lab |
 | `lab-kathmandu.jpg` | Impact page — Koseli Foundation |
 | `lab-pune.jpg` | Impact page — BVJSS |
 | `lab-gujarat.jpg` | Impact page — Gujarat lab |
