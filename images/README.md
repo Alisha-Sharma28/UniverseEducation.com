@@ -32,3 +32,5 @@ Only use photos you have permission to share, especially of minors.
 
 Each photo's alt text (for screen readers) is the `aria-label` on its slot in
 the HTML. Update it to describe your actual photo.
+
+**Added since:** `impact-bvjss-lesson.jpg`, `impact-bvjss-help.jpg`, `impact-teaching.jpg` (Our Impact photos), `story-group.jpg` (Our Story), `press-first-india.jpg` (Our Impact press). Timeline photos go in as `milestone-1.jpg`, `milestone-2.jpg`, … and appear automatically.
