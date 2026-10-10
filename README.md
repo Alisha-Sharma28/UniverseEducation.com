@@ -10,7 +10,7 @@ impact.html         Our Impact (map, lab cards, where money goes, giving levels)
 story.html          Our Story (founding story, timeline, team, Asha partnership, press)
 how-it-works.html   Process + FAQ
 get-involved.html   Four paths, starter kit, volunteer form
-events.html         Dinner Night + past events
+team.html           Our Team (leadership + officer applications)
 donate.html         Donation widget + trust badges
 contact.html        Contact form
 thanks.html         Form success page
@@ -87,7 +87,6 @@ Buy a domain (for example from Namecheap, Cloudflare or Google), then follow you
 | `mailchimpAction` | Mailchimp → **Audience → Signup forms → Embedded forms**. Copy the URL inside `action="..."`. |
 | `formEndpoint` | Only needed on GitHub Pages (see above). |
 | `gaId` | Google Analytics → **Admin → Data streams** → your **Measurement ID** (`G-…`). Once this is set, a cookie consent banner appears automatically and analytics load only after the visitor accepts. |
-| `event.*` | Event date (ISO format), a friendly date label, the venue, and the ticket link. This turns on the **Add to calendar** and **Google Calendar** buttons. |
 | `stats.*` | The animated numbers on the home page. |
 
 ## Editing tips

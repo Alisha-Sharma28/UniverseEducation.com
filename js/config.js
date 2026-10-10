@@ -37,14 +37,6 @@ window.SITE = {
   gaId: "",
   // Fundraiser starter kit (PDF in /images or a Google Drive link)
   starterKitUrl: "",
-
-  /* ---- Featured event ---- */
-  event: {
-    title: "Dinner Night for Education and Hygiene",
-    start: "",            // ISO format, e.g. "2026-11-14T18:00:00-08:00"
-    end: "",              // e.g. "2026-11-14T21:00:00-08:00"
-    dateLabel: "",        // e.g. "Saturday, November 14, 2026 · 6–9 PM"
-    venue: "",            // e.g. "Community Center, 123 Main St, San Jose, CA"
-    ticketUrl: ""         // Eventbrite / Givebutter ticket link
-  }
+  // Officer application form (e.g. a Google Form). Leave "" to send applicants to the Contact form.
+  officerApplicationUrl: ""
 };

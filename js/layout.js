@@ -13,9 +13,9 @@
     { id: "home", href: "index.html", label: "Home" },
     { id: "impact", href: "impact.html", label: "Our Impact" },
     { id: "story", href: "story.html", label: "Our Story" },
+    { id: "team", href: "team.html", label: "Our Team" },
     { id: "how", href: "how-it-works.html", label: "How It Works" },
     { id: "involved", href: "get-involved.html", label: "Get Involved" },
-    { id: "events", href: "events.html", label: "Events" },
     { id: "contact", href: "contact.html", label: "Contact" }
   ];
 

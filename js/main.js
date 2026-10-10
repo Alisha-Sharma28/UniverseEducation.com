@@ -172,6 +172,12 @@
     });
   });
 
+  /* ---------- Optional config links (keep the normal href when not set) ---------- */
+  $$("[data-optional-link]").forEach(function (a) {
+    var url = get(S, a.getAttribute("data-optional-link"));
+    if (url) { a.href = url; a.target = "_blank"; a.rel = "noopener"; }
+  });
+
   /* ---------- Simple config-driven links ---------- */
   $$("[data-link]").forEach(function (a) {
     var url = get(S, a.getAttribute("data-link"));
@@ -188,44 +194,6 @@
         if (!note.parentNode) a.parentNode.appendChild(note);
       });
     }
-  });
-
-  /* ---------- Add to calendar (.ics download + Google Calendar) ---------- */
-  function icsDate(iso) { return new Date(iso).toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, ""); }
-  $$(".js-add-calendar").forEach(function (btn) {
-    var ev = S.event || {};
-    btn.addEventListener("click", function (e) {
-      e.preventDefault();
-      if (!ev.start) {
-        var note = btn.parentNode.querySelector(".notice") || document.createElement("p");
-        note.className = "notice";
-        note.setAttribute("role", "status");
-        note.textContent = "The date hasn't been announced yet — check back soon!";
-        if (!note.parentNode) btn.parentNode.appendChild(note);
-        return;
-      }
-      var end = ev.end || new Date(new Date(ev.start).getTime() + 3 * 3600e3).toISOString();
-      var desc = "Co-hosted by UniVerse Education and Owed Soap. Proceeds fund computers for rural schools and an ongoing soap supply.";
-      var ics = [
-        "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//UniVerse Education//Events//EN", "BEGIN:VEVENT",
-        "UID:" + icsDate(ev.start) + "@universeeducation", "DTSTAMP:" + icsDate(new Date().toISOString()),
-        "DTSTART:" + icsDate(ev.start), "DTEND:" + icsDate(end),
-        "SUMMARY:" + ev.title, "DESCRIPTION:" + desc, "LOCATION:" + (ev.venue || "").replace(/,/g, "\\,"),
-        "END:VEVENT", "END:VCALENDAR"
-      ].join("\r\n");
-      var a = document.createElement("a");
-      a.href = URL.createObjectURL(new Blob([ics], { type: "text/calendar" }));
-      a.download = "universe-dinner-night.ics";
-      document.body.appendChild(a); a.click(); a.remove();
-    });
-  });
-  $$(".js-google-calendar").forEach(function (a) {
-    var ev = S.event || {};
-    if (!ev.start) { a.hidden = true; return; }
-    var end = ev.end || new Date(new Date(ev.start).getTime() + 3 * 3600e3).toISOString();
-    a.href = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=" + encodeURIComponent(ev.title) +
-      "&dates=" + icsDate(ev.start) + "/" + icsDate(end) + "&location=" + encodeURIComponent(ev.venue || "");
-    a.target = "_blank"; a.rel = "noopener";
   });
 
   /* ---------- Google Analytics (only if configured) + cookie banner ---------- */

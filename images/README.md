@@ -25,9 +25,7 @@ Only use photos you have permission to share, especially of minors.
 | `partner-owed-soap.png`, `partner-koseli.png` | Home partners (added) |
 | `partner-bvjss.png`, `partner-asha.png` | Home partners (add these) |
 | `logo-asha.png` | Our Story partnership section |
-| `logo-owed-soap.png` | Events page |
 | `fundraiser.jpg` | Get Involved — starter kit |
-| `event-dinner.jpg` | Events — Dinner Night |
 | `past-event-1-a.jpg` … `past-event-2-d.jpg` | Events — past event galleries |
 
 Each photo's alt text (for screen readers) is the `aria-label` on its slot in
