@@ -403,6 +403,10 @@ ul, ol { padding-left: 1.2em; }
 .role-card h4 { color: var(--marigold-400); font-family: var(--font-body); font-weight: 600; font-size: 1.2rem; line-height: 1.3; margin: 0 0 .55rem; }
 .role-card p { margin: 0; font-size: 1rem; color: #d3d5f0; line-height: 1.65; }
 
+/* A logo shown in a photo slot (contained, not cropped) */
+.photo.photo-logo { background: var(--white); border: 1px solid var(--line); }
+.photo.photo-logo > img { object-fit: contain; padding: 12%; }
+
 /* Larger standalone section title */
 .section-title-lg { font-size: clamp(2.6rem, 6vw, 3.75rem); margin-bottom: 0; }
 
