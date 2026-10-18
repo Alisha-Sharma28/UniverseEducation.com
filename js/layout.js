@@ -15,8 +15,7 @@
     { id: "story", href: "story.html", label: "Our Story" },
     { id: "team", href: "team.html", label: "Our Team" },
     { id: "how", href: "how-it-works.html", label: "How It Works" },
-    { id: "involved", href: "get-involved.html", label: "Get Involved" },
-    { id: "contact", href: "contact.html", label: "Contact" }
+    { id: "involved", href: "get-involved.html", label: "Get Involved" }
   ];
 
   var ICON = {
@@ -31,15 +30,14 @@
   window.ICON = ICON;
 
   function socialList(extraClass) {
-    var names = { instagram: "Instagram", linkedin: "LinkedIn", youtube: "YouTube", facebook: "Facebook" };
+    var names = { instagram: "Instagram", linkedin: "LinkedIn" };
     var out = '<ul class="social ' + (extraClass || "") + '">';
     Object.keys(names).forEach(function (k) {
       var url = (S.social || {})[k];
       // Until a link is added, the icon points to the Contact page so nothing is broken.
-      out += '<li><a href="' + (url || "contact.html") + '"' + (url ? ' target="_blank" rel="noopener"' : "") +
+      out += '<li><a href="' + (url || "get-involved.html#inquiry") + '"' + (url ? ' target="_blank" rel="noopener"' : "") +
         ' aria-label="' + names[k] + (url ? "" : " (link coming soon)") + '">' + ICON[k] + "</a></li>";
     });
-    if (S.email) out += '<li><a href="mailto:' + S.email + '" aria-label="Email us">' + ICON.mail + "</a></li>";
     return out + "</ul>";
   }
   window.socialList = socialList;
@@ -64,9 +62,7 @@
     '<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">' + ICON.menu + ICON.close + "</button>" +
     "</div></header>";
 
-  var legal = (S.legalStatus ? "UniVerse Education is " + S.legalStatus + "." : '<span class="tbd">[Confirm nonprofit status]</span>') +
-    " EIN: " + (S.ein ? S.ein : '<span class="tbd">[EIN]</span>');
-
+  var email = S.email || "UniVerseEducation.org@gmail.com";
   var footer =
     '<footer class="site-footer"><div class="container">' +
     '<div class="footer-grid">' +
@@ -75,16 +71,11 @@
         NAV.map(function (n) { return '<li><a href="' + n.href + '">' + n.label + "</a></li>"; }).join("") +
         '<li><a href="donate.html">Donate</a></li>' +
       "</ul></div>" +
-      "<div><h2>Stay in the loop</h2><p>Lab updates and student stories, a few times a year. No spam.</p>" +
-        '<form class="newsletter js-newsletter" novalidate>' +
-          '<label class="visually-hidden" for="footer-email">Email address</label>' +
-          '<input id="footer-email" type="email" name="EMAIL" placeholder="you@example.com" autocomplete="email" required>' +
-          '<button class="btn btn-accent btn-sm" type="submit">Subscribe</button>' +
-          '<p class="form-status small" role="status" aria-live="polite"></p>' +
-        "</form></div>" +
+      "<div><h2>Contact us</h2><p>Questions, partnerships, or press? We'd love to hear from you.</p>" +
+        '<a class="footer-email" href="mailto:' + email + '">' + ICON.mail + "<span>" + email + "</span></a>" +
+      "</div>" +
     "</div>" +
-    '<div class="footer-bottom"><span>' + legal + "</span>" +
-    "<span>© " + new Date().getFullYear() + " UniVerse Education. Student-led, grassroots-funded.</span></div>" +
+    '<div class="footer-bottom"><span>© ' + new Date().getFullYear() + " UniVerse Education. Student-led, grassroots-funded.</span></div>" +
     "</div></footer>";
 
   var h = document.getElementById("site-header");

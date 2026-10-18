@@ -12,7 +12,6 @@ how-it-works.html   Process + FAQ
 get-involved.html   Four paths, starter kit, volunteer form
 team.html           Our Team (leadership + officer applications)
 donate.html         Donation widget + trust badges
-contact.html        Contact form
 thanks.html         Form success page
 404.html            Not-found page
 css/styles.css      The one shared stylesheet (colors/fonts at the top in :root)
@@ -63,7 +62,7 @@ If you use VS Code, the **Live Server** extension does the same thing with one c
 2. Click **Add new site → Import an existing project → GitHub**, then pick this repository.
 3. Leave the build command **empty** and set the publish directory to `/` (the root). Click **Deploy**.
 4. In about 30 seconds you'll get a URL like `https://universe-education.netlify.app`. You can rename it in **Site configuration → Change site name**.
-5. Forms: go to **Forms** in the Netlify dashboard and enable form detection, then redeploy. Submissions from the Contact and Get Involved forms will appear there. Turn on email notifications under **Forms → Form notifications**.
+5. Forms: nothing to set up. The Get Involved form emails UniVerseEducation.org@gmail.com through FormSubmit (activate it once from the first email).
 6. Every time you push to GitHub, Netlify redeploys automatically.
 
 *No GitHub?* You can also drag and drop this whole folder onto https://app.netlify.com/drop.
@@ -74,7 +73,7 @@ If you use VS Code, the **Live Server** extension does the same thing with one c
 2. In the repo, go to **Settings → Pages**.
 3. Under **Source**, choose **Deploy from a branch**, then select `main` and `/ (root)`. Click **Save**.
 4. After about a minute, the site is live at `https://<your-username>.github.io/<repo-name>/`.
-5. Forms: GitHub Pages can't receive form posts. Create a free form at https://formspree.io and paste its endpoint into `formEndpoint` in `js/config.js`.
+5. Forms: already handled. The Get Involved form emails UniVerseEducation.org@gmail.com through FormSubmit on any host.
 
 ### Custom domain (either host)
 
@@ -84,8 +83,7 @@ Buy a domain (for example from Namecheap, Cloudflare or Google), then follow you
 
 | Setting | How to get it |
 |---|---|
-| `mailchimpAction` | Mailchimp → **Audience → Signup forms → Embedded forms**. Copy the URL inside `action="..."`. |
-| `formEndpoint` | Only needed on GitHub Pages (see above). |
+| `formEndpoint` | Already set: Get Involved inquiries are emailed to UniVerseEducation.org@gmail.com through FormSubmit. The first message triggers an activation email; click **Activate Form** once. |
 | `gaId` | Google Analytics → **Admin → Data streams** → your **Measurement ID** (`G-…`). Once this is set, a cookie consent banner appears automatically and analytics load only after the visitor accepts. |
 | `stats.*` | The animated numbers on the home page. |
 

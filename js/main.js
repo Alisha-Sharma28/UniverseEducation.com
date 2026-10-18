@@ -156,13 +156,15 @@
         e.preventDefault();
         var btn = $('button[type="submit"]', form);
         if (btn) btn.disabled = true;
-        fetch(S.formEndpoint, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } })
-          .then(function (r) {
-            if (!r.ok) throw new Error();
+        var data = {};
+        new FormData(form).forEach(function (v, k) { data[k] = v; });
+        fetch(S.formEndpoint, { method: "POST", body: JSON.stringify(data), headers: { "Content-Type": "application/json", Accept: "application/json" } })
+          .then(function (r) { return r.json().then(function (j) { if (!r.ok || String(j.success) === "false") throw new Error(); }); })
+          .then(function () {
             form.reset();
             setStatus(status, "Thank you! We'll be in touch soon.", "ok");
           })
-          .catch(function () { setStatus(status, "Something went wrong. Please email us instead.", "warn"); })
+          .catch(function () { setStatus(status, "Something went wrong. Please email us at " + (S.email || "UniVerseEducation.org@gmail.com") + ".", "warn"); })
           .then(function () { if (btn) btn.disabled = false; });
         return;
       }

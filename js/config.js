@@ -14,29 +14,19 @@ window.SITE = {
     students: 550         // students reached
   },
 
-  /* ---- Legal / trust ---- */
-  legalStatus: "",        // e.g. "a registered 501(c)(3) nonprofit" — confirm before publishing
-  ein: "",                // e.g. "12-3456789"
-
-  /* ---- Contact & social (leave "" to hide a social icon's link) ---- */
-  email: "",              // e.g. "hello@universeeducation.org"
+  /* ---- Contact & social (paste the full profile links) ---- */
+  email: "UniVerseEducation.org@gmail.com",
   social: {
     instagram: "",
-    linkedin: "",
-    youtube: "",
-    facebook: ""
+    linkedin: ""
   },
 
   /* ---- Integrations ---- */
-  // Mailchimp: Audience → Signup forms → Embedded form → copy the <form action="..."> URL
-  mailchimpAction: "",
-  // Contact / volunteer forms. Leave "" if hosting on Netlify (Netlify Forms work automatically).
-  // For GitHub Pages, create a free form at formspree.io and paste its endpoint, e.g. "https://formspree.io/f/abcdwxyz"
-  formEndpoint: "",
+  // Inquiry form delivery: FormSubmit emails every message to the address in this URL.
+  // The very first message sends an activation email to that inbox; click "Activate Form" once.
+  formEndpoint: "https://formsubmit.co/ajax/UniVerseEducation.org@gmail.com",
   // Google Analytics 4 measurement ID, e.g. "G-XXXXXXXXXX". Cookie banner only appears when this is set.
   gaId: "",
-  // Fundraiser starter kit (PDF in /images or a Google Drive link)
-  starterKitUrl: "",
   // Officer application form (the Apply now button on team.html links here directly)
   officerApplicationUrl: "https://forms.gle/UgfrWf4JL1zNh55z7"
 };
