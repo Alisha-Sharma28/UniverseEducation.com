@@ -37,6 +37,6 @@ window.SITE = {
   gaId: "",
   // Fundraiser starter kit (PDF in /images or a Google Drive link)
   starterKitUrl: "",
-  // Officer application form (e.g. a Google Form). Leave "" to send applicants to the Contact form.
-  officerApplicationUrl: ""
+  // Officer application form (the Apply now button on team.html links here directly)
+  officerApplicationUrl: "https://forms.gle/UgfrWf4JL1zNh55z7"
 };
