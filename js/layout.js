@@ -71,7 +71,7 @@
         NAV.map(function (n) { return '<li><a href="' + n.href + '">' + n.label + "</a></li>"; }).join("") +
         '<li><a href="donate.html">Donate</a></li>' +
       "</ul></div>" +
-      "<div><h2>Contact us</h2><p>Questions, partnerships, or press? We'd love to hear from you.</p>" +
+      "<div><h2>Contact us</h2>" +
         '<a class="footer-email" href="mailto:' + email + '">' + ICON.mail + "<span>" + email + "</span></a>" +
       "</div>" +
     "</div>" +

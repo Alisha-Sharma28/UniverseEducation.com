@@ -17,8 +17,8 @@ window.SITE = {
   /* ---- Contact & social (paste the full profile links) ---- */
   email: "UniVerseEducation.org@gmail.com",
   social: {
-    instagram: "",
-    linkedin: ""
+    instagram: "https://www.instagram.com/universe.education_/",
+    linkedin: "https://www.linkedin.com/company/uni-verse-education/"
   },
 
   /* ---- Integrations ---- */

@@ -3,6 +3,13 @@
    Mobile-first. Edit the tokens in :root to re-theme the whole site.
    ========================================================================== */
 
+/* Fonts (self-hosted in /fonts, SIL Open Font License): DM Serif Display for titles, DM Sans for text */
+@font-face { font-family: "DM Serif Display"; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/dm-serif-display-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "DM Sans"; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/dm-sans-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "DM Sans"; font-style: normal; font-weight: 500; font-display: swap; src: url("../fonts/dm-sans-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "DM Sans"; font-style: normal; font-weight: 600; font-display: swap; src: url("../fonts/dm-sans-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "DM Sans"; font-style: normal; font-weight: 700; font-display: swap; src: url("../fonts/dm-sans-latin-700-normal.woff2") format("woff2"); }
+
 :root {
   /* Brand colors */
   --navy-900: #12164a;
@@ -19,10 +26,9 @@
   --line: #e6e1d8;
 
   /* Type */
-  /* Titles: Gambarino (Indian Type Foundry). Subtitles, labels and text: Clash Display.
-     Both load free from Fontshare (see the <link> in each page's <head>). */
-  --font-display: "Gambarino", "Iowan Old Style", Georgia, "Times New Roman", serif;
-  --font-body: "Clash Display", "Avenir Next", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  /* Titles: DM Serif Display. Subtitles, labels and text: DM Sans. */
+  --font-display: "DM Serif Display", Georgia, "Times New Roman", serif;
+  --font-body: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 
   /* Shape & spacing */
   --radius-sm: 10px;
@@ -44,7 +50,7 @@ body {
   font-family: var(--font-body);
   font-size: 1.0625rem;
   line-height: 1.7;
-  letter-spacing: .01em;
+  letter-spacing: 0;
   color: var(--ink);
   background: var(--cream);
   -webkit-font-smoothing: antialiased;
@@ -165,7 +171,7 @@ ul, ol { padding-left: 1.2em; }
 .header-inner { display: flex; align-items: center; gap: .75rem; height: var(--header-h); }
 .brand { display: flex; align-items: center; gap: .6rem; text-decoration: none; color: var(--navy-900); margin-right: auto; }
 .brand img { width: auto; height: 40px; }
-.brand-name { font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; font-synthesis: weight; line-height: 1; white-space: nowrap; }
+.brand-name { font-family: var(--font-display); font-size: 1.4rem; font-weight: 400; line-height: 1; white-space: nowrap; }
 .brand-name span { color: var(--marigold-500); }
 .nav-toggle {
   display: inline-flex; align-items: center; justify-content: center;
@@ -266,6 +272,7 @@ ul, ol { padding-left: 1.2em; }
 }
 .hero .photo-label { margin: calc(var(--header-h) - 40px) 0 0; align-items: flex-end; text-align: right; font-size: .75rem; }
 .hero .photo-label::before { width: 26px; height: 26px; }
+.hero-photo > img { object-position: center 62%; }
 .hero::after {
   content: ""; position: absolute; inset: 0; pointer-events: none;
   background: linear-gradient(180deg, rgba(18,22,74,.15) 0%, rgba(18,22,74,.55) 55%, rgba(18,22,74,.9) 100%);
@@ -411,7 +418,9 @@ ul, ol { padding-left: 1.2em; }
 .path-card h3 { margin-bottom: .55rem; }
 .path-card p { flex: 1; }
 .path-card .btn { margin-top: .75rem; white-space: nowrap; }
-.inquiry-sub { font-family: var(--font-display); font-weight: 400; font-size: clamp(1.45rem, 3vw, 1.9rem); color: var(--navy-700); margin: .9rem 0 1rem; }
+.inquiry-sub { font-family: var(--font-display); font-weight: 400; font-size: clamp(1.45rem, 3vw, 1.9rem); color: var(--navy-700); margin: 1.6rem 0 1.4rem; }
+#inquiry .section-head .lead { line-height: 1.7; }
+#inquiry .section-head { margin-bottom: 3rem; }
 #inquiry .section-title-lg { font-size: clamp(2.3rem, 5.5vw, 3.4rem); }
 
 /* Footer email */
