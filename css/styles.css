@@ -275,8 +275,20 @@ ul, ol { padding-left: 1.2em; }
 .hero-photo > img { object-position: center 62%; }
 .hero::after {
   content: ""; position: absolute; inset: 0; pointer-events: none;
-  background: linear-gradient(180deg, rgba(18,22,74,.15) 0%, rgba(18,22,74,.55) 55%, rgba(18,22,74,.9) 100%);
+  /* Phones: text covers most of the photo, so darken the lower two-thirds evenly */
+  background: linear-gradient(180deg, rgba(18,22,74,.25) 0%, rgba(18,22,74,.72) 38%, rgba(18,22,74,.9) 100%);
 }
+@media (min-width: 760px) {
+  /* Wider screens: a navy fade behind the text on the left, photo stays clear on the right */
+  .hero::after {
+    background:
+      linear-gradient(90deg, rgba(18,22,74,.92) 0%, rgba(18,22,74,.82) 32%, rgba(18,22,74,.45) 58%, rgba(18,22,74,.08) 82%, rgba(18,22,74,0) 100%),
+      linear-gradient(180deg, rgba(18,22,74,0) 55%, rgba(18,22,74,.5) 100%);
+  }
+  .hero-photo > img { object-position: 70% 62%; }
+}
+.hero h1, .hero p { text-shadow: 0 2px 18px rgba(10,12,40,.45); }
+@media (min-width: 760px) { .hero-content { max-width: 600px; } .hero h1 { font-size: clamp(2.6rem, 4.6vw, 3.6rem); } }
 .hero-content { position: relative; z-index: 1; padding: 8rem 0 clamp(3rem, 8vw, 5.5rem); max-width: 820px; }
 .hero h1 { color: var(--white); }
 .hero p { font-size: clamp(1.1rem, 2.2vw, 1.35rem); color: #e4e6fa; max-width: 620px; margin-bottom: 2rem; }
