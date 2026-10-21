@@ -29,7 +29,7 @@ Anything unverified shows on the page as **highlighted yellow text in [brackets]
 - Search the `.html` files for `class="tbd"` and `CONFIRM`.
 - Open `js/config.js` and fill in every `""` / `null`.
 - Add your photos to `/images` using the filenames in `images/README.md`. They appear automatically.
-- Replace `https://universeeducation.com` in the `<head>` of each page and in `robots.txt` / `sitemap.xml` with your real domain.
+- 
 
 Before you publish, double-check these against each other, because your notes and the brief disagree:
 
