@@ -1,99 +1,49 @@
 # UniVerse Education website
 
-A static, multi-page website for UniVerse Education. It uses plain HTML, CSS and JavaScript, with no frameworks and no build step, so it can be hosted free on **Netlify** or **GitHub Pages**.
+The website for UniVerse Education, a student-led initiative bringing computer labs with Wi-Fi to rural schools across South Asia. It is plain HTML, CSS and JavaScript with no build step, hosted free on GitHub Pages.
 
-## File structure
+**Live site:** https://alisha-sharma28.github.io/UniverseEducation.com/
 
-```
-index.html          Home
-impact.html         Our Impact (map, lab cards, where money goes, giving levels)
-story.html          Our Story (founding story, timeline, team, Asha partnership, press)
-how-it-works.html   Process + FAQ
-get-involved.html   Four paths, starter kit, volunteer form
-team.html           Our Team (leadership + officer applications)
-donate.html         Donation widget + trust badges
-thanks.html         Form success page
-404.html            Not-found page
-css/styles.css      The one shared stylesheet (colors/fonts at the top in :root)
-js/config.js        ⭐ All numbers, links, EIN, event details and integrations live here
-js/layout.js        The one shared header + footer (edit the menu here)
-js/main.js          Counters, animations, forms, donate widget, map, analytics
-images/             Photos + logos (see images/README.md for exact filenames)
-robots.txt, sitemap.xml, favicon.svg
-```
+## Pages
 
-## Before you publish: fill in the placeholders
-
-Anything unverified shows on the page as **highlighted yellow text in [brackets]**. To find every placeholder:
-
-- Search the `.html` files for `class="tbd"` and `CONFIRM`.
-- Open `js/config.js` and fill in every `""` / `null`.
-- Add your photos to `/images` using the filenames in `images/README.md`. They appear automatically.
-- 
-
-Before you publish, double-check these against each other, because your notes and the brief disagree:
-
-| Item | Notes say | Brief says |
-|---|---|---|
-| Amount raised | "over $10K" | "$16,000+" |
-| Locations | 5 (Wazirpur UP, Kathmandu, Pune, +2) | 4 labs: Gujarat, Rajasthan, Kathmandu |
-| Nepal partner | Koseli Foundation (slum communities) | "an orphanage in Nepal" |
-
-Also confirm the tax-deductibility FAQ, the EIN, and the nonprofit status line. Only say donations are tax-deductible once IRS 501(c)(3) status (or a fiscal sponsor) is confirmed.
-
-## Preview it on your computer
-
-**Quickest:** double-click `index.html` to open it in your browser. Everything works except the map tiles on some browsers.
-
-**Recommended (works exactly like the live site):**
-
-1. Open a terminal in this folder.
-2. Run `python3 -m http.server 8000` (Windows: `py -m http.server 8000`).
-3. Visit http://localhost:8000.
-4. Press `Ctrl+C` in the terminal to stop.
-
-If you use VS Code, the **Live Server** extension does the same thing with one click.
-
-## Publish it live
-
-### Option A: Netlify (recommended, because forms work with zero setup)
-
-1. Go to https://app.netlify.com and sign up with your GitHub account.
-2. Click **Add new site → Import an existing project → GitHub**, then pick this repository.
-3. Leave the build command **empty** and set the publish directory to `/` (the root). Click **Deploy**.
-4. In about 30 seconds you'll get a URL like `https://universe-education.netlify.app`. You can rename it in **Site configuration → Change site name**.
-5. Forms: nothing to set up. The Get Involved form emails UniVerseEducation.org@gmail.com through FormSubmit (activate it once from the first email).
-6. Every time you push to GitHub, Netlify redeploys automatically.
-
-*No GitHub?* You can also drag and drop this whole folder onto https://app.netlify.com/drop.
-
-### Option B: GitHub Pages
-
-1. Push this repo to GitHub (on the `main` branch).
-2. In the repo, go to **Settings → Pages**.
-3. Under **Source**, choose **Deploy from a branch**, then select `main` and `/ (root)`. Click **Save**.
-4. After about a minute, the site is live at `https://<your-username>.github.io/<repo-name>/`.
-5. Forms: already handled. The Get Involved form emails UniVerseEducation.org@gmail.com through FormSubmit on any host.
-
-### Custom domain (either host)
-
-Buy a domain (for example from Namecheap, Cloudflare or Google), then follow your host's guide: Netlify **Domain management → Add a domain**, or GitHub **Settings → Pages → Custom domain**. HTTPS is free and automatic on both.
-
-## Connect the integrations (all in `js/config.js`)
-
-| Setting | How to get it |
+| File | Page |
 |---|---|
-| `formEndpoint` | Already set: Get Involved inquiries are emailed to UniVerseEducation.org@gmail.com through FormSubmit. The first message triggers an activation email; click **Activate Form** once. |
-| `gaId` | Google Analytics → **Admin → Data streams** → your **Measurement ID** (`G-…`). Once this is set, a cookie consent banner appears automatically and analytics load only after the visitor accepts. |
-| `stats.*` | The animated numbers on the home page. |
+| `index.html` | Home |
+| `impact.html` | Our Impact (map, press, photos) |
+| `story.html` | Our Story (founding story, milestones timeline) |
+| `team.html` | Our Team (leadership, officer applications) |
+| `how-it-works.html` | How It Works + FAQ |
+| `get-involved.html` | Get Involved (four paths + inquiry form) |
+| `donate.html` | Donate (GoFundMe and PayPal) |
+| `thanks.html`, `404.html` | Form fallback and not-found pages |
 
-## Editing tips
+## Where things live
 
-- **Donation links:** the GoFundMe and PayPal buttons are near the top of `donate.html`. Search for `gofund.me` or `paypal.me` to change them.
+- `css/styles.css`: the one stylesheet. Colours and fonts are set at the top.
+- `js/layout.js`: the shared header and footer (menu links, footer email, social icons).
+- `js/config.js`: impact numbers, email, Instagram/LinkedIn links, form delivery, officer application link.
+- `js/main.js`: counters, animations, mobile menu, form sending.
+- `fonts/`: DM Serif Display (titles) and DM Sans (text), self-hosted (SIL Open Font License).
+- `images/`: all photos and logos. `og-image.jpg` is the picture shown when the link is shared.
 
-- **Impact map:** it's your Google My Map. Edit pins at https://www.google.com/mymaps and the website updates automatically.
-- **Partner logos:** drop `partner-bvjss.png` or `partner-asha.png` into `/images` and they replace the name tiles on the home page.
+## How things work
 
-- **Colors and fonts:** change the variables at the top of `css/styles.css`.
-- **Menu or footer:** edit `js/layout.js` once and every page updates.
-- **New page:** copy any page and change its `<title>`, meta description, OG tags, and `data-page`.
+- **Inquiry form** (Get Involved): messages are emailed to UniVerseEducation.org@gmail.com through FormSubmit. The first message sends an activation email to that inbox; click **Activate Form** once.
+- **Map** (Our Impact): an embedded Google My Map. Edit pins at google.com/mymaps; the map must be shared as "Anyone with the link can view".
+- **Donations**: the GoFundMe and PayPal buttons are near the top of `donate.html`.
+- **Officer applications**: the Apply now buttons link to the Google Form set in `js/config.js`.
+
+## Preview locally
+
+From this folder run `python3 -m http.server 8000`, then open http://localhost:8000.
+
+## Publishing (GitHub Pages)
+
+Settings → Pages → Source: **Deploy from a branch** → Branch: `main`, folder `/ (root)` → Save. Changes merged into `main` go live within a minute or two.
+
+## Adding a custom domain later
+
+1. Buy the domain (e.g. at Cloudflare Registrar).
+2. Add DNS records: four `A` records for `@` pointing to `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`, and a `CNAME` for `www` pointing to `alisha-sharma28.github.io` (set to "DNS only" in Cloudflare).
+3. Settings → Pages → Custom domain → enter the domain → Save, then tick **Enforce HTTPS**.
+4. Replace `https://alisha-sharma28.github.io/UniverseEducation.com/` with the new domain in each page's `<head>`, `robots.txt` and `sitemap.xml`.
