@@ -138,7 +138,7 @@ ul, ol { padding-left: 1.2em; }
 /* ---------- Buttons ---------- */
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
-  font: 500 1.06rem/1 var(--font-body); letter-spacing: 0; padding: 1rem 1.65rem; border-radius: 999px;
+  font: 700 1.06rem/1 var(--font-body); letter-spacing: .005em; padding: 1rem 1.65rem; border-radius: 999px;
   text-decoration: none; border: 2px solid transparent; cursor: pointer;
   transition: transform .15s ease, background-color .2s ease, box-shadow .2s ease, color .2s ease;
   min-height: 48px;
@@ -277,6 +277,7 @@ ul, ol { padding-left: 1.2em; }
    Below 1280px: photo on top, easing down into navy, text below. */
 .hero { background: radial-gradient(120% 90% at 0% 100%, #1d2370 0%, var(--navy-900) 60%); }
 .hero .hero-photo { background: transparent; }
+.hero-glow { display: none; }
 .hero-photo > img { object-position: center 50%; }
 .hero .hero-photo::after { content: ""; position: absolute; inset: 0; pointer-events: none; }
 @media (max-width: 1279px) {
@@ -295,16 +296,20 @@ ul, ol { padding-left: 1.2em; }
   .hero .hero-photo { z-index: 0; }
   .hero .hero-content { z-index: 2; }
   /* soft light behind the photo's edge so the transition feels natural */
-  /* a soft wash of the wall's pink spilling into the navy, so photo and background blend */
-  .hero::after {
-    display: block; inset: 0 auto 0 calc(clamp(2rem, 4.5vw, 5rem) + 44rem - 320px); width: 420px; z-index: 0;
-    background: linear-gradient(90deg, rgba(196,120,182,0) 0%, rgba(196,120,182,.1) 30%, rgba(196,120,182,.24) 58%, rgba(196,120,182,.38) 78%, rgba(196,120,182,.15) 100%);
-    filter: blur(6px);
+  .hero::after { display: none; }
+  /* blurred copy of the photo: carries its colours far into the navy for a long, soft blend */
+  .hero-glow {
+    display: block; position: absolute; top: 0; bottom: 0; right: 0; z-index: 0; pointer-events: none;
+    left: calc(clamp(2rem, 4.5vw, 5rem) + 22rem);
+    background: url("../images/home-hero.jpg") left center / cover no-repeat;
+    filter: blur(48px) saturate(1.15); opacity: .55; transform: scale(1.08);
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.12) 18%, rgba(0,0,0,.32) 34%, rgba(0,0,0,.58) 48%, rgba(0,0,0,.8) 60%, #000 72%);
+            mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.12) 18%, rgba(0,0,0,.32) 34%, rgba(0,0,0,.58) 48%, rgba(0,0,0,.8) 60%, #000 72%);
   }
   .hero .hero-photo {
-    inset: 0 0 0 auto; left: calc(clamp(2rem, 4.5vw, 5rem) + 44rem);
-    -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.08) 2.5%, rgba(0,0,0,.22) 5%, rgba(0,0,0,.42) 7.5%, rgba(0,0,0,.64) 10%, rgba(0,0,0,.82) 12.5%, rgba(0,0,0,.94) 15%, #000 18%);
-            mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.08) 2.5%, rgba(0,0,0,.22) 5%, rgba(0,0,0,.42) 7.5%, rgba(0,0,0,.64) 10%, rgba(0,0,0,.82) 12.5%, rgba(0,0,0,.94) 15%, #000 18%);
+    inset: 0 0 0 auto; left: calc(clamp(2rem, 4.5vw, 5rem) + 40rem);
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.05) 3%, rgba(0,0,0,.15) 6%, rgba(0,0,0,.3) 9%, rgba(0,0,0,.48) 12%, rgba(0,0,0,.66) 15%, rgba(0,0,0,.82) 18%, rgba(0,0,0,.93) 21%, #000 25%);
+            mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.05) 3%, rgba(0,0,0,.15) 6%, rgba(0,0,0,.3) 9%, rgba(0,0,0,.48) 12%, rgba(0,0,0,.66) 15%, rgba(0,0,0,.82) 18%, rgba(0,0,0,.93) 21%, #000 25%);
   }
   .hero .hero-photo::after { background: linear-gradient(180deg, rgba(18,22,74,.12) 0%, rgba(18,22,74,0) 18%, rgba(18,22,74,0) 82%, rgba(18,22,74,.25) 100%); }
 }
@@ -401,13 +406,14 @@ ul, ol { padding-left: 1.2em; }
 .milestone .photo { aspect-ratio: 4 / 3; box-shadow: var(--shadow); max-width: 100%; }
 .milestone-body .when { display: inline-block; font-weight: 600; font-size: .9rem; letter-spacing: .1em; text-transform: uppercase; color: var(--navy-900); background: var(--marigold-100); border-radius: 999px; padding: .35rem .9rem; margin-bottom: .8rem; }
 .milestone-body h3 { font-family: var(--font-display); font-weight: 400; font-size: clamp(1.7rem, 3.4vw, 2.3rem); margin-bottom: .5rem; }
-.milestone-body p { font-size: 1.08rem; color: var(--ink-soft); margin: 0; }
+.milestone-body p { font-size: 1.08rem; color: var(--ink-soft); margin: 0; max-width: 34em; text-wrap: pretty; }
+.milestone-body h3 { text-wrap: balance; }
 @media (min-width: 860px) {
   .milestones::before { content: ""; position: absolute; left: 50%; top: 0; bottom: 0; width: 3px; transform: translateX(-50%); background: linear-gradient(var(--marigold-500), var(--navy-700)); border-radius: 3px; }
   .milestone { grid-template-columns: 1fr 1fr; gap: 5rem; }
   .milestone::before { content: ""; position: absolute; left: 50%; top: 50%; width: 22px; height: 22px; transform: translate(-50%, -50%); border-radius: 50%; background: var(--white); border: 5px solid var(--marigold-500); z-index: 1; }
   .milestone:nth-child(even) .photo { order: 2; }
-  .milestone:nth-child(even) .milestone-body { text-align: right; }
+  .milestone:nth-child(even) .milestone-body { text-align: left; }
 }
 
 /* ---------- Our Team ---------- */
