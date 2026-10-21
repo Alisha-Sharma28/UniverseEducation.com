@@ -298,13 +298,15 @@ ul, ol { padding-left: 1.2em; }
   /* soft light behind the photo's edge so the transition feels natural */
   .hero::after { display: none; }
   /* blurred copy of the photo: carries its colours far into the navy for a long, soft blend */
+  /* colour bridge: the photo's own left-edge colours (wall, then floor), fading in from the navy.
+     Because it matches what the photo starts with, the photo's fade has no visible seam. */
   .hero-glow {
-    display: block; position: absolute; top: 0; bottom: 0; right: 0; z-index: 0; pointer-events: none;
-    left: 0;
-    background: url("../images/home-hero.jpg") left center / cover no-repeat;
-    filter: blur(80px) saturate(1.25); opacity: .85; transform: scale(1.12);
-    -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,.04) 0%, rgba(0,0,0,.1) 10%, rgba(0,0,0,.18) 20%, rgba(0,0,0,.28) 29%, rgba(0,0,0,.4) 38%, rgba(0,0,0,.54) 46%, rgba(0,0,0,.7) 54%, rgba(0,0,0,.85) 62%, #000 70%);
-            mask-image: linear-gradient(90deg, rgba(0,0,0,.04) 0%, rgba(0,0,0,.1) 10%, rgba(0,0,0,.18) 20%, rgba(0,0,0,.28) 29%, rgba(0,0,0,.4) 38%, rgba(0,0,0,.54) 46%, rgba(0,0,0,.7) 54%, rgba(0,0,0,.85) 62%, #000 70%);
+    display: block; position: absolute; top: 0; bottom: 0; left: 0; z-index: 0; pointer-events: none;
+    width: calc(clamp(2rem, 4.5vw, 5rem) + 40rem + 14rem);
+    background: linear-gradient(180deg, rgb(253,196,232) 5%, rgb(253,185,217) 15%, rgb(253,176,203) 25%, rgb(253,172,197) 35%, rgb(252,172,197) 45%, rgb(243,161,182) 55%, rgb(222,108,122) 65%, rgb(208,164,157) 75%, rgb(208,185,183) 85%, rgb(204,200,210) 95%);
+    filter: blur(10px);
+    -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,0.0) calc((100% - 14rem) * 0), rgba(0,0,0,0.012) calc((100% - 14rem) * 0.12), rgba(0,0,0,0.05) calc((100% - 14rem) * 0.24), rgba(0,0,0,0.117) calc((100% - 14rem) * 0.36), rgba(0,0,0,0.214) calc((100% - 14rem) * 0.48), rgba(0,0,0,0.342) calc((100% - 14rem) * 0.6), rgba(0,0,0,0.473) calc((100% - 14rem) * 0.7), rgba(0,0,0,0.626) calc((100% - 14rem) * 0.8), rgba(0,0,0,0.765) calc((100% - 14rem) * 0.88), rgba(0,0,0,0.878) calc((100% - 14rem) * 0.94), rgba(0,0,0,1.0) calc((100% - 14rem) * 1), #000 100%);
+            mask-image: linear-gradient(90deg, rgba(0,0,0,0.0) calc((100% - 14rem) * 0), rgba(0,0,0,0.012) calc((100% - 14rem) * 0.12), rgba(0,0,0,0.05) calc((100% - 14rem) * 0.24), rgba(0,0,0,0.117) calc((100% - 14rem) * 0.36), rgba(0,0,0,0.214) calc((100% - 14rem) * 0.48), rgba(0,0,0,0.342) calc((100% - 14rem) * 0.6), rgba(0,0,0,0.473) calc((100% - 14rem) * 0.7), rgba(0,0,0,0.626) calc((100% - 14rem) * 0.8), rgba(0,0,0,0.765) calc((100% - 14rem) * 0.88), rgba(0,0,0,0.878) calc((100% - 14rem) * 0.94), rgba(0,0,0,1.0) calc((100% - 14rem) * 1), #000 100%);
   }
   /* keeps the text area readable on top of the warmer glow */
   .hero > .container::before {
@@ -313,8 +315,8 @@ ul, ol { padding-left: 1.2em; }
   }
   .hero .hero-photo {
     inset: 0 0 0 auto; left: calc(clamp(2rem, 4.5vw, 5rem) + 40rem);
-    -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.08) 3%, rgba(0,0,0,.2) 6%, rgba(0,0,0,.34) 9%, rgba(0,0,0,.5) 12%, rgba(0,0,0,.65) 15%, rgba(0,0,0,.78) 18%, rgba(0,0,0,.89) 21%, rgba(0,0,0,.96) 24%, #000 27%);
-            mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.08) 3%, rgba(0,0,0,.2) 6%, rgba(0,0,0,.34) 9%, rgba(0,0,0,.5) 12%, rgba(0,0,0,.65) 15%, rgba(0,0,0,.78) 18%, rgba(0,0,0,.89) 21%, rgba(0,0,0,.96) 24%, #000 27%);
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.02) 3%, rgba(0,0,0,.08) 6%, rgba(0,0,0,.18) 9%, rgba(0,0,0,.32) 12%, rgba(0,0,0,.5) 15%, rgba(0,0,0,.68) 18%, rgba(0,0,0,.84) 21%, rgba(0,0,0,.95) 24%, #000 27%);
+            mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.02) 3%, rgba(0,0,0,.08) 6%, rgba(0,0,0,.18) 9%, rgba(0,0,0,.32) 12%, rgba(0,0,0,.5) 15%, rgba(0,0,0,.68) 18%, rgba(0,0,0,.84) 21%, rgba(0,0,0,.95) 24%, #000 27%);
   }
   .hero .hero-photo::after { background: linear-gradient(180deg, rgba(18,22,74,.12) 0%, rgba(18,22,74,0) 18%, rgba(18,22,74,0) 82%, rgba(18,22,74,.25) 100%); }
 }
