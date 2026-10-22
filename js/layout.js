@@ -10,12 +10,12 @@
   var current = document.body.getAttribute("data-page") || "";
 
   var NAV = [
-    { id: "home", href: "index.html", label: "Home" },
-    { id: "impact", href: "impact.html", label: "Our Impact" },
-    { id: "story", href: "story.html", label: "Our Story" },
-    { id: "team", href: "team.html", label: "Our Team" },
-    { id: "how", href: "how-it-works.html", label: "How It Works" },
-    { id: "involved", href: "get-involved.html", label: "Get Involved" }
+    { id: "home", href: "/", label: "Home" },
+    { id: "impact", href: "/impact", label: "Our Impact" },
+    { id: "story", href: "/story", label: "Our Story" },
+    { id: "team", href: "/team", label: "Our Team" },
+    { id: "how", href: "/how-it-works", label: "How It Works" },
+    { id: "involved", href: "/get-involved", label: "Get Involved" }
   ];
 
   var ICON = {
@@ -35,7 +35,7 @@
     Object.keys(names).forEach(function (k) {
       var url = (S.social || {})[k];
       // Until a link is added, the icon points to the Contact page so nothing is broken.
-      out += '<li><a href="' + (url || "get-involved.html#inquiry") + '"' + (url ? ' target="_blank" rel="noopener"' : "") +
+      out += '<li><a href="' + (url || "/get-involved#inquiry") + '"' + (url ? ' target="_blank" rel="noopener"' : "") +
         ' aria-label="' + names[k] + (url ? "" : " (link coming soon)") + '">' + ICON[k] + "</a></li>";
     });
     return out + "</ul>";
@@ -43,7 +43,7 @@
   window.socialList = socialList;
 
   function brandMark(logo) {
-    return '<a class="brand" href="index.html" aria-label="UniVerse Education home">' +
+    return '<a class="brand" href="/" aria-label="UniVerse Education home">' +
       '<img src="images/' + logo + '" alt="" width="45" height="40">' +
       '<span class="brand-name">Uni<span>Verse</span> Education</span></a>';
   }
@@ -58,7 +58,7 @@
     '<header class="site-header" id="top">' +
     '<div class="container header-inner">' + brand +
     '<nav class="site-nav" id="site-nav" aria-label="Main"><ul>' + navItems + "</ul></nav>" +
-    '<a class="btn btn-accent header-donate" href="donate.html"' + (current === "donate" ? ' aria-current="page"' : "") + ">Donate</a>" +
+    '<a class="btn btn-accent header-donate" href="/donate"' + (current === "donate" ? ' aria-current="page"' : "") + ">Donate</a>" +
     '<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">' + ICON.menu + ICON.close + "</button>" +
     "</div></header>";
 
@@ -69,7 +69,7 @@
       "<div>" + brandMark("logo-light.png") + "<p>" + (S.mission || "") + "</p>" + socialList() + "</div>" +
       '<div><h2>Quick links</h2><ul class="footer-links">' +
         NAV.map(function (n) { return '<li><a href="' + n.href + '">' + n.label + "</a></li>"; }).join("") +
-        '<li><a href="donate.html">Donate</a></li>' +
+        '<li><a href="/donate">Donate</a></li>' +
       "</ul></div>" +
       "<div><h2>Contact us</h2>" +
         '<a class="footer-email" href="mailto:' + email + '">' + ICON.mail + "<span>" + email + "</span></a>" +

@@ -35,7 +35,7 @@ The website for UniVerse Education, a student-led initiative bringing computer l
 
 ## Preview locally
 
-From this folder run `python3 -m http.server 8000`, then open http://localhost:8000.
+From this folder run `python3 -m http.server 8000`, then open http://localhost:8000. Links use short addresses (`/impact` instead of `impact.html`), which GitHub Pages understands; with the simple local server, open pages by their full file name (e.g. http://localhost:8000/impact.html).
 
 ## Publishing (GitHub Pages)
 
