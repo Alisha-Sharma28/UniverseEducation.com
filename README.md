@@ -2,7 +2,7 @@
 
 The website for UniVerse Education, a student-led initiative bringing computer labs with Wi-Fi to rural schools across South Asia. It is plain HTML, CSS and JavaScript with no build step, hosted free on GitHub Pages.
 
-**Live site:** https://alisha-sharma28.github.io/UniverseEducation.com/
+**Live site:** https://universeeducation.net/
 
 ## Pages
 
@@ -41,9 +41,10 @@ From this folder run `python3 -m http.server 8000`, then open http://localhost:8
 
 Settings → Pages → Source: **Deploy from a branch** → Branch: `main`, folder `/ (root)` → Save. Changes merged into `main` go live within a minute or two.
 
-## Adding a custom domain later
+## Custom domain
 
-1. Buy the domain (e.g. at Cloudflare Registrar).
-2. Add DNS records: four `A` records for `@` pointing to `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`, and a `CNAME` for `www` pointing to `alisha-sharma28.github.io` (set to "DNS only" in Cloudflare).
-3. Settings → Pages → Custom domain → enter the domain → Save, then tick **Enforce HTTPS**.
-4. Replace `https://alisha-sharma28.github.io/UniverseEducation.com/` with the new domain in each page's `<head>`, `robots.txt` and `sitemap.xml`.
+The site uses **universeeducation.net** (registered at Namecheap). The `CNAME` file in this folder tells GitHub Pages which domain to serve; don't delete it.
+
+Namecheap → Domain List → Manage → Advanced DNS has:
+- four `A` records for `@` → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+- one `CNAME` record for `www` → `alisha-sharma28.github.io`
