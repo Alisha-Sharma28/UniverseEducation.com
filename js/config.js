@@ -27,6 +27,6 @@ window.SITE = {
   formEndpoint: "https://formsubmit.co/ajax/UniVerseEducation.org@gmail.com",
   // Google Analytics 4 measurement ID, e.g. "G-XXXXXXXXXX". Cookie banner only appears when this is set.
   gaId: "",
-  // Officer application form (the Apply now button on team.html links here directly)
+  // Officer application form (the Apply now button on the Our Team page links here directly)
   officerApplicationUrl: "https://forms.gle/UgfrWf4JL1zNh55z7"
 };

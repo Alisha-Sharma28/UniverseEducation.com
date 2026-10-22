@@ -80,14 +80,14 @@
     } else {
       el.setAttribute("data-target", v);
       // Show the real number by default; it counts up from 0 when scrolled into view.
-      el.textContent = (el.getAttribute("data-prefix") || "") + Number(v).toLocaleString() + (el.getAttribute("data-suffix") || "");
+      el.textContent = (el.getAttribute("data-prefix") || "") + (reduceMotion ? Number(v).toLocaleString() : "0") + (el.getAttribute("data-suffix") || "");
     }
   });
   function runCounter(el) {
     var target = +el.getAttribute("data-target");
     var pre = el.getAttribute("data-prefix") || "", suf = el.getAttribute("data-suffix") || "";
     if (reduceMotion) { el.textContent = pre + target.toLocaleString() + suf; return; }
-    var start = null, dur = 1600;
+    var start = null, dur = 2000;
     function tick(t) {
       if (!start) start = t;
       var p = Math.min((t - start) / dur, 1);
@@ -110,7 +110,16 @@
       });
     }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" });
     $$(".reveal").forEach(function (el) { io.observe(el); });
-    $$("[data-target]").forEach(function (el) { io.observe(el); });
+    // Counters wait until the numbers are fully on screen and clear of the bottom edge,
+    // so visitors see them count up after scrolling down from the hero.
+    var counterIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        runCounter(en.target);
+        counterIO.unobserve(en.target);
+      });
+    }, { threshold: 1, rootMargin: "0px 0px -18% 0px" });
+    $$("[data-target]").forEach(function (el) { counterIO.observe(el); });
   } else {
     $$(".reveal").forEach(function (el) { el.classList.add("is-visible"); });
     $$("[data-target]").forEach(runCounter);
